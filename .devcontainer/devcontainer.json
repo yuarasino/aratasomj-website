@@ -1,0 +1,27 @@
+{
+	"name": "aratasomj",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+  "forwardPorts": [7700, 11600],
+	"workspaceFolder": "/workspaces/aratasomj",
+  "remoteUser": "root",
+  "postCreateCommand": ".devcontainer/post-create.sh",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+	},
+  "customizations": {
+		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "backend/.venv/bin/python",
+        "python.terminal.activateEnvironment": false
+			},
+      "extensions": [
+        "editorconfig.editorconfig",
+        "ms-azuretools.vscode-docker",
+        "ms-python.python"
+      ]
+		}
+	}
+}
